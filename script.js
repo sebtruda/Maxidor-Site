@@ -1,15 +1,15 @@
-function showTab(tabId) {
-    // Hide all tab contents
-    document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
+function showProduct(productID) {
+    const tabs = document.querySelectorAll('.tab-link');
+    const contents = document.querySelectorAll('.product-content');
+
+    tabs.forEach(tab => tab.classList.remove('active'));
+    contents.forEach(content => {
+        content.style.display = 'none';
+        content.classList.remove('active');
     });
 
-    // Remove active class from all tab buttons
-    document.querySelectorAll('.tab-button').forEach(button => {
-        button.classList.remove('active');
-    });
-
-    // Show the clicked tab content and mark the button as active
-    document.getElementById(tabId).classList.add('active');
-    event.currentTarget.classList.add('active');
+    const activeContent = document.getElementById(productID);
+    activeContent.style.display = 'flex';
+    activeContent.classList.add('active');
+    document.querySelector(`[onclick="showProduct('${productID}')"]`).classList.add('active');
 }
