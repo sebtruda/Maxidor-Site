@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxidor - Secure Your Space</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Maxidor Logo">
+            <h1>Maxidor</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#quote">Get a Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Video Background -->
+    <section id="home" class="hero-section">
+        <video autoplay muted loop id="background-video">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>Maxidor</h1>
+            <p>Stylish. Secure. South African.</p>
+            <a href="#quote" class="cta-button">Get a Quote</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <h2>Our Products</h2>
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('security-gates')">Security Gates</button>
+            <button class="tab-button" onclick="showTab('burglar-bars')">Burglar Bars</button>
+            <button class="tab-button" onclick="showTab('roller-shutters')">Roller Shutters</button>
+            <button class="tab-button" onclick="showTab('maxi-louvre')">Maxi Louvre</button>
+        </div>
+        <div id="security-gates" class="tab-content active">
+            <div class="product">
+                <img src="product_image.png" alt="Security Gate">
+                <h3>Ultra Security Gate</h3>
+                <p>10-Year Guarantee, Chemical Fastening, Dual Slamlock</p>
+                <button class="view-product">View Product</button>
+            </div>
+            <!-- Add more products as needed -->
+        </div>
+        <div id="burglar-bars" class="tab-content">
+            <!-- Products for Burglar Bars -->
+        </div>
+        <div id="roller-shutters" class="tab-content">
+            <!-- Products for Roller Shutters -->
+        </div>
+        <div id="maxi-louvre" class="tab-content">
+            <!-- Products for Maxi Louvre -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
